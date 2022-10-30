@@ -23,7 +23,8 @@ def get(endpoint, params=None):
     return response
 
 def get_status():
-    return get(STATUS)
+    r = get(STATUS)
+    return r.json()
 
 def get_area(area_id, test=None):
     params = {"id": area_id}
